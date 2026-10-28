@@ -319,7 +319,7 @@ img {
 
 .judul-konten {
     margin: 22px 0 18px;
-    color: #143e30;
+    color:var(--warna-text-utama);
     font-size: var(--size-judul);
     line-height: 1.2;
     letter-spacing: -1px;
