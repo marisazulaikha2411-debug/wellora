@@ -229,7 +229,7 @@
 
     </main>
 
-  <section class="about">
+  <section class="about" id="tentang">
     <div class="about-kiri">
         <span class="about-badge">
         <i class="fa-solid fa-info-circle"></i> Tentang wellora
@@ -329,8 +329,8 @@
 
            </div>
   </section>
-
-  <section class="hubungi">
+<!-- hubungi -->
+  <section class="hubungi" id="kontak">
     <div class="hubungi-kiri">
     <div class="teks-hubungi">
     <p><i class="fa-solid fa-headset"></i>Hubungi Kami</p>
@@ -397,7 +397,6 @@
     </div>
     </div>
   </section>
-
   
 <!-- FOOTER WELLORA -->
 <footer class="footer">
@@ -437,7 +436,34 @@
     </div>
 </footer>
 
- 
+ <button id="btnBackToTop" class="btn-back-to-top" onclick="keAtasHalaman()">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <script>
+// // setiap user melakukan scroll jalankan fungsi di dalam
+// funsi ini akan di panggil berulang" selama pengguna melakukan scroll
+    window.addEventListener('scroll', function(){
+       
+       
+         // get elemen by id  : mengembil  elemen html yg memilih id btnbacktotop
+
+
+        const btnTop = document.getElementById('btnBackToTop');
+        if(window.scrollY >300){
+            btnTop.style.display= 'flex';
+        }else{
+            btnTop.style.display= 'none';
+        }
+    });
+
+        function keAtasHalaman(){
+            window.scrollTo({
+                top: 0, behavior: 'smooth'
+                // bergulir halus ke paling atas
+            })
+        }
+  </script>
 
 </body>
-</html>                                                                                                                                                                                                                     
+</html>                                                                                                                                                                                                                                                                                                            

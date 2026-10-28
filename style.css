@@ -320,14 +320,14 @@ img {
 .judul-konten {
     margin: 22px 0 18px;
     color: #143e30;
-    font-size: clamp(30px, 3vw, 44px);
+    font-size: var(--size-judul);
     line-height: 1.2;
     letter-spacing: -1px;
 }
 
 .description {
     color: #68766f;
-    font-size: 15px;
+    font-size: var(--size-text-desc);
     line-height: 1.9;
 }
 
@@ -667,7 +667,7 @@ footer {
     }
 
     .description {
-        font-size: 14px;
+        font-size: var(--size-text-desc);
     }
 
     .daftar-fitur li {
@@ -901,7 +901,7 @@ body {
 }
 
 .about-title{
-font-size:30px;
+font-size:var(--size-judul);
 color:#12372a;
 font-weight:800;
 line-height:1.25;
@@ -1010,7 +1010,7 @@ color: #2ead70;
 
 .teks-hubungi {
     text-align: center;
-    margin-bottom: 45px;
+    margin-bottom: var(--size-judul);
 }
 
 .teks-hubungi h1 {
@@ -1101,7 +1101,7 @@ color: #2ead70;
 
 /* Deskripsi */
 .footer-description {
-    font-size: 16px;
+    font-size: var(--size-text-desc);
     line-height: 1.7;
     color: #a5b8ae;
     margin-bottom: 32px;
@@ -1145,3 +1145,48 @@ color: #2ead70;
     line-height: 1.7;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
+/* memberikan jarak */
+section{
+    scroll-margin-top: 70px;
+}
+
+.btn-back-to-top{
+    /* posisi fixed membuat elemen tetap berada di
+    posisi  */
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 48px;
+    height: 48px;
+    background-color:#2EAD70;
+    color: #ffffff;
+    border: none;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    cursor: pointer;
+    box-shadow: 0 6px 18px rgba(46, 73, 122, ) ;
+    z-index: 999;
+    transition: all 0.2s ease;
+    /* display: none; */
+
+}
+
+.btn-back-to-top:hover{
+    background-color: #12372A;
+    transform: translateY(-3px);
+}
+
+/* buat fariabel dan terapkan untuk keseluruhan */
+:root{
+    --warna-text-utama : #12372a;
+    --warna-botton : #2ead70;
+    --warna-text-desc : #52606d;
+    --size-text-desc : 16px;
+    --size-judul : 48px;
+}
